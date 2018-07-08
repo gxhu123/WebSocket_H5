@@ -16,8 +16,8 @@ public class WebSocketH5Config implements WebSocketConfigurer{
 	public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
 		
 	//handler是webSocket的核心，配置入口
-	registry.addHandler(new MyHandler(), "/myHandler/{ID}").setAllowedOrigins("*").addInterceptors(new WebSocketInterceptor());
-		
+	registry.addHandler(new MyHandler(), "/myHandler/").setAllowedOrigins("*").addInterceptors(new WebSocketInterceptor());
+		//System.out.println("registerWebSocketHandlers ..... ..");
 	}
  
 	

@@ -19,9 +19,10 @@ public class WebSocketInterceptor implements HandshakeInterceptor {
         if (request instanceof ServletServerHttpRequest) {
             ServletServerHttpRequest serverHttpRequest = (ServletServerHttpRequest) request;
             HttpSession session = serverHttpRequest.getServletRequest().getSession();
-            map.put("WEBSOCKET_USERID",session.getId());
+            //map.put("WEBSOCKET_USERID",session.getId());
+            System.out.println("beforeHandshake ...WEBSOCKET_USERID="+session.getId());
         }
-        System.out.println("comming ===");
+
         return true;
     }
  
